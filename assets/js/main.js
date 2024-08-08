@@ -233,17 +233,21 @@ async function fetchRepositories(repos) {
 }
 
 // Function to display repositories as images
-async function displayRepositories(repos) {
+async function displayRepositories() {
   const container = document.getElementById('repositories-container');
+  const repos = await fetch('https://api.github.com/orgs/Dustover/repos')
+    .then(response => response.json());
+
   for (let repo of repos) {
-    const imgUrl = encodeURI(`https://github-readme-stats.vercel.app/api/pin/?username=Dustover&repo=${repo.name}`);
-    const img = document.createElement('img');
-    img.src = imgUrl;
-    img.alt = '';
-    img.className = 'img-fluid';
-    container.appendChild(img);
+    if (repo.name) {
+      const imgUrl = encodeURI(`https://github-readme-stats.vercel.app/api/pin/?username=Dustover&repo=${repo.name}`);
+      const img = document.createElement('img');
+      img.src = imgUrl;
+      img.alt = '';
+      img.className = 'img-fluid';
+      container.appendChild(img);
+    }
   }
 }
 
-// Fetch and display repositories
-fetchRepositories(reposToFetch).then((repos) => displayRepositories(repos));
+displayRepositories();
