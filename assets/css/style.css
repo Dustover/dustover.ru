@@ -1617,3 +1617,17 @@ section {
   font-size: 13px;
   color: #fff;
 }
+
+
+#repositories-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.img-fluid {
+  width: 30%;
+  height: 30%;
+  object-fit: cover;
+  margin: 10px;
+}
