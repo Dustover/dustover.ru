@@ -241,9 +241,9 @@ async function displayRepositories() {
 displayRepositories();
 
 const portfolioData = [
-  { url: 'https://example.com/site1', category: 'Веб-разработка', image: 'img/site1.jpg' },
-  { url: 'https://example.com/site2', category: 'Мобильные приложения', image: 'img/site2.jpg' },
-  { url: 'https://example.com/site3', category: 'Дизайн', image: 'img/site3.jpg' },
+  { url: 'https://example.com/site1', category: 'App', image: 'img/site1.jpg' },
+  { url: 'https://example.com/site2', category: 'Web', image: 'img/site2.jpg' },
+  { url: 'https://example.com/site3', category: 'Card', image: 'img/site3.jpg' },
   // ...
 ];
 
