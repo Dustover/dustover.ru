@@ -1626,10 +1626,9 @@ section {
 }
 
 .img-fluid-repo {
-  width: 30%;
-  height: 30%;
   object-fit: cover;
   margin: 10px;
   border-radius: 10px; /* добавить округлые углы */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* добавить легкую тень */
+  display: block; /* Добавить эту строку */
 }
