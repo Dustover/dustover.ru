@@ -240,26 +240,26 @@ async function displayRepositories() {
 
 displayRepositories();
 
-const portfolioData = [
-  { url: 'https://example.com/site1', category: 'App', image: 'img/site1.jpg' },
-  { url: 'https://example.com/site2', category: 'Web', image: 'img/site2.jpg' },
-  { url: 'https://example.com/site3', category: 'Card', image: 'img/site3.jpg' },
-  // ...
-];
+// const portfolioData = [
+//   { url: 'https://example.com/site1', category: 'App', image: 'img/site1.jpg' },
+//   { url: 'https://example.com/site2', category: 'Web', image: 'img/site2.jpg' },
+//   { url: 'https://example.com/site3', category: 'Card', image: 'img/site3.jpg' },
+//   // ...
+// ];
 
-const portfolioContainer = document.getElementById('portfolio-container');
+// const portfolioContainer = document.getElementById('portfolio-container');
 
-portfolioData.forEach((item) => {
-  const portfolioItem = document.createElement('div');
-  portfolioItem.className = `col-lg-4 col-md-6 portfolio-item filter-${item.category.toLowerCase()}`;
-  portfolioItem.innerHTML = `
-    <div class="portfolio-wrap">
-      <img src="${item.image}" alt="${item.category}">
-      <div class="portfolio-info">
-        <h4>${item.category}</h4>
-        <p><a href="${item.url}" target="_blank">Посетить сайт</a></p>
-      </div>
-    </div>
-  `;
-  portfolioContainer.appendChild(portfolioItem);
-});
+// portfolioData.forEach((item) => {
+//   const portfolioItem = document.createElement('div');
+//   portfolioItem.className = `col-lg-4 col-md-6 portfolio-item filter-${item.category.toLowerCase()}`;
+//   portfolioItem.innerHTML = `
+//     <div class="portfolio-wrap">
+//       <img src="${item.image}" alt="${item.category}">
+//       <div class="portfolio-info">
+//         <h4>${item.category}</h4>
+//         <p><a href="${item.url}" target="_blank">Посетить сайт</a></p>
+//       </div>
+//     </div>
+//   `;
+//   portfolioContainer.appendChild(portfolioItem);
+// });
