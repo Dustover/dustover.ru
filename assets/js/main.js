@@ -244,7 +244,7 @@ async function displayRepositories() {
       const img = document.createElement('img');
       img.src = imgUrl;
       img.alt = '';
-      img.className = 'img-fluid';
+      img.className = 'img-fluid-repo';
       container.appendChild(img);
     }
   }
