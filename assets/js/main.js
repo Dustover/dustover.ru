@@ -211,3 +211,39 @@
   new PureCounter();
 
 })()
+
+
+
+// List of repositories to fetch
+const reposToFetch = ['daily-routine-timer', 'another-repo', 'yet-another-repo'];
+
+// Function to fetch repositories
+async function fetchRepositories(repos) {
+  const githubData = [];
+  for (let repo of repos) {
+    await fetch(`https://api.github.com/repos/Dustover/${repo}`, {
+      method: 'GET',
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        githubData.push(data);
+      });
+  }
+  return githubData;
+}
+
+// Function to display repositories as images
+async function displayRepositories(repos) {
+  const container = document.getElementById('repositories-container');
+  for (let repo of repos) {
+    const imgUrl = encodeURI(`https://github-readme-stats.vercel.app/api/pin/?username=Dustover&repo=${repo.name}`);
+    const img = document.createElement('img');
+    img.src = imgUrl;
+    img.alt = '';
+    img.className = 'img-fluid';
+    container.appendChild(img);
+  }
+}
+
+// Fetch and display repositories
+fetchRepositories(reposToFetch).then((repos) => displayRepositories(repos));
