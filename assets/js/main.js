@@ -213,25 +213,6 @@
 })()
 
 
-
-// List of repositories to fetch
-const reposToFetch = ['daily-routine-timer', 'another-repo', 'yet-another-repo'];
-
-// Function to fetch repositories
-async function fetchRepositories(repos) {
-  const githubData = [];
-  for (let repo of repos) {
-    await fetch(`https://api.github.com/repos/Dustover/${repo}`, {
-      method: 'GET',
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        githubData.push(data);
-      });
-  }
-  return githubData;
-}
-
 // Function to display repositories as images
 async function displayRepositories() {
   const container = document.getElementById('repositories-container');
