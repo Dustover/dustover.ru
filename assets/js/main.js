@@ -222,11 +222,18 @@ async function displayRepositories() {
   for (let repo of repos) {
     if (repo.name) {
       const imgUrl = encodeURI(`https://github-readme-stats.vercel.app/api/pin/?username=Dustover&repo=${repo.name}`);
+      const repoUrl = `https://github.com/Dustover/${repo.name}`;
       const img = document.createElement('img');
       img.src = imgUrl;
       img.alt = '';
       img.className = 'img-fluid-repo';
-      container.appendChild(img);
+
+      const a = document.createElement('a');
+      a.href = repoUrl;
+      a.target = '_blank';
+      a.appendChild(img);
+
+      container.appendChild(a);
     }
   }
 }
